@@ -1,0 +1,23 @@
+{
+  "name": "guiaperguntas",
+  "version": "1.0.0",
+  "description": "Uma plataforma de perguntas e respostas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/edenilsonmota/guia-perguntas.git"
+  },
+  "author": "Edenilson Mota",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/edenilsonmota/guia-perguntas/issues"
+  },
+  "homepage": "https://github.com/edenilsonmota/guia-perguntas#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.3"
+  }
+}
