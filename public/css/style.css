@@ -1,0 +1,16 @@
+body{
+    background-color:#67727e;
+}
+
+
+.card .card-header h3{
+    text-align: center;
+}
+
+.logo{
+    font-weight: bolder;
+}
+
+.perguntar{
+    color: orange !important;
+}
