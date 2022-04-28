@@ -1,7 +1,8 @@
 const express = require("express"); //importando modulo do express
 const app = express(); //criando uma instancia do express
-const bodyParser = require("body-parser"); //importando body-parser
+const bodyParser = require("body-parser"); //import body-parser
 const connection = require("./database/database");//import database
+const Pergunta = require("./database/Pergunta"); //import model database pergunta
 
 //database
 connection  //fazendo/autenticando conexão
@@ -23,6 +24,11 @@ app.use(bodyParser.json()); //ler dados de formulario via json
 
 //Rotas
 app.get("/",(req, res) => {  //criando rota de principal
+    Pergunta.findAll({raw:true}).then(perguntas =>{
+        res.render("index",{
+            perguntas:perguntas
+        })
+    }); //Select * All From perguntas
     res.render("index"); //renderizando views/index  
 });
 
@@ -33,8 +39,14 @@ app.get("/perguntar",(req, res) => { //rotas perguntas
 app.post("/pergunta-realizada", (req, res) =>{ //recebendo dados do from, em method post
     var titulo = req.body.titulo; //pegando dados do formulario pela name = titulo
     var descricao = req.body.descricao;
-    res.send("formulario recebido!");
-})
+    //salvar perguntas
+    Pergunta.create({
+        titulo: titulo, //name colunn e name var
+        descricao: descricao //name colunn e name var
+    }).then(() => {
+        res.redirect("/");
+    });   
+});
 
 
 app.listen(8080,()=>{ //porta para rodar aplicação

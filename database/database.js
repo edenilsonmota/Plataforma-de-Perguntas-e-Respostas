@@ -1,9 +1,9 @@
 const sequelize = require('sequelize'); //importando sequelize
-
-const connection = new sequelize('guiaperguntas', 'root', 'Mota@1180',{
-    host: 'localhost',
-    dialect: 'mysql'
-}); //fazendo coneção com o banco de dados
+                                        //database, use, pass
+const connection = new sequelize('perguntabilizando', 'root', 'Mota@1180',{
+    host: 'localhost', //host
+    dialect: 'mysql' //type database
+}); //fazendo conexão com o banco de dados
 
 
 module.exports = connection; //exportando conexão
