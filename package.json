@@ -8,19 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/edenilsonmota/guia-perguntas.git"
+    "url": "git+https://github.com/edenilsonmota/Plataforma-de-Perguntas-e-Respostas"
   },
   "author": "Edenilson Mota",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/edenilsonmota/guia-perguntas/issues"
+    "url": "https://github.com/edenilsonmota/Plataforma-de-Perguntas-e-Respostas/issues"
   },
-  "homepage": "https://github.com/edenilsonmota/guia-perguntas#readme",
+  "homepage": "https://github.com/edenilsonmota/Plataforma-de-Perguntas-e-Respostas#readme",
   "dependencies": {
-    "body-parser": "^1.19.2",
-    "ejs": "^3.1.6",
-    "express": "^4.17.3",
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.7",
+    "express": "^4.18.0",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.17.0"
+    "sequelize": "^6.19.0"
   }
 }
